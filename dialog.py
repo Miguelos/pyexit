@@ -19,7 +19,6 @@ class MyDialog():
         system("dbus-send --print-reply --system --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement.Reboot")
 
     def hibernate_action(self, btn):
-        system("cb-lock")
         system("dbus-send --print-reply --system --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement.Hibernate")
         gtk.main_quit()
 
